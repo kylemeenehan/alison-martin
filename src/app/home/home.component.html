@@ -1,0 +1,8 @@
+<div class="columns is-multiline">
+  <div class="column is-3-widescreen is-4-desktop is-4-tablet" *ngFor="let collection of collections">
+    <a routerLink="/collection/{{collection.url}}">
+      <img src="/assets/images/{{collection.url}}/1.jpg">
+      <span>view collection</span>
+    </a>
+  </div>
+</div>

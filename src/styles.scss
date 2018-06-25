@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bulma/css/bulma.css";
+@import "~include-media/dist/include-media";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$header-height: 100px;
+$thumbnail-width: 150px;
+$thumbnail-padding: 30px;
+
+$light-gray: #ccc;
+
+@mixin fluid-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@mixin full-height {
+  height: calc(100vh - #{$header-height});
+}
+
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+body {
+  padding-top: $header-height;
+  font-family: 'Open Sans', sans-serif;
+}
+
+mat-drawer-container {
+  @include full-height();
+  overflow: scroll;
+}
+
+mat-drawer {
+  @include full-height();
+  overflow: scroll;
+}
+
+mat-drawer-content {
+  @include full-height();
+  .container {
+    height: 100%;
+    overflow: scroll;
+  }
+}
+
+.image-container {
+  height: calc(100vh - 200px);
+  padding: 50px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media('<=tablet') {
+    height: auto;
+    padding: 5px;
+  }
+
+  img {
+    @include fluid-image();
+  }
+}
+
+.thumbnails-container {
+  width: $thumbnail-width;
+  height: 100%;
+  padding-left: $thumbnail-padding;
+  border-right: 1px solid $light-gray;
+  img {
+    @include fluid-image();
+  }
+  a {
+    color: #333;
+    padding: 5px 0;
+    display: block;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: $thumbnail-width;
+  background-color: white;
+  border-bottom: 1px solid $light-gray;
+  z-index: 100;
+  height: $header-height;
+  cursor: pointer;
+  @include center-content();
+
+  &:focus {
+    outline: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+
