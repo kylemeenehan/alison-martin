@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-
-import { SiteConfigService } from './site-config.service';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,9 @@ import { SiteConfigService } from './site-config.service';
 })
 export class AppComponent {
 
-  collections;
+  constructor(private http: HttpClient) {
+  }
 
-  constructor(private site: SiteConfigService) {
-    this.collections = this.site.getCollections();
+  ngOnInit() {
   }
 }

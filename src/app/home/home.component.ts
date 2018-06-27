@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SiteConfigService } from '../site-config.service';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -9,14 +9,19 @@ import { SiteConfigService } from '../site-config.service';
 })
 export class HomeComponent implements OnInit {
 
+  loading: boolean = true;
   collections;
 
-  constructor( private site: SiteConfigService ) {
-    this.collections = this.site.getCollections();
+  constructor( private api: ApiService ) {
   }
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    this.api.downloadAll().then(() => {
+      this.collections = this.api.collections;
+      this.collections.forEach(collection => {
+        collection.image = this.api.getWorksByCollection(collection.id)[0].image;
+      })
+    });
   }
 
 }

@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
-
-import { SiteConfigService } from '../site-config.service';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-collection',
@@ -15,22 +14,24 @@ export class CollectionComponent implements OnInit {
   collections;
   collection;
   images;
+  works;
 
   constructor(
     private route: ActivatedRoute,
-    private site: SiteConfigService
+    private api: ApiService
   ) {
-    this.collections = this.site.getCollections();
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    if(!this.api.collections || !this.api.works) {
+      await this.api.downloadAll();
+    }
+    this.collections = this.api.collections;
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.container.nativeElement.scrollTop = 0;
-      this.collection = this.site.getCollection(params.get('id'));
-      this.images = [];
-      for (let i = 1; i <= this.collection.numberOfImages; i++) {
-        this.images.push(`assets/images/${this.collection.url}/${i}.jpg`);
-      }
+      let id = params.get('id');
+      this.collection = this.collections.find(collection => collection.id == id);
+      this.works = this.api.getWorksByCollection(id)
     });
   }
 

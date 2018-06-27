@@ -1,14 +1,16 @@
 <mat-drawer-container autosize>
   <mat-drawer mode="side" opened="true">
     <div class="thumbnails-container">
-      <a routerLink="/collection/{{collection.url}}" *ngFor="let collection of collections">
-        <span> {{collection.title}} </span>
+      <a routerLink="/collection/{{collection.id}}" *ngFor="let collection of collections">
+        <span> {{collection.name}} </span>
       </a>
     </div>
   </mat-drawer>
 
 <div class="container" #container>
-  <div class="image-container" *ngFor="let image of images; let i = index;">
-    <img [src]="image" alt="Alison Martin {{collection.title}} {{i}}">
+  <div class="image-container" *ngFor="let work of works">
+    <h2 class="is-size-5">{{ work.name }}</h2>
+    <img [src]="work.image" alt="{{work.name}}">
+    <h3 class="is-size-7">{{work.material}} - {{ work.description }} | {{ work.dimensions_x }}mm x {{ work.dimensions_y }}mm</h3>
   </div>
 </div>
