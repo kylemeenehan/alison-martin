@@ -39,7 +39,7 @@ html, body {
 
 body {
   padding-top: $header-height;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nexa Light', 'Open Sans', sans-serif;
 }
 
 mat-drawer-container {
@@ -98,9 +98,10 @@ mat-drawer-content {
   top: 0;
   left: 0;
   width: 100%;
-  padding-left: $thumbnail-width;
+  // padding-left: $thumbnail-width;
   background-color: white;
-  border-bottom: 1px solid $light-gray;
+  // border-bottom: 1px solid $light-gray;
+  color:rgb(163, 163, 163);
   z-index: 100;
   height: $header-height;
   cursor: pointer;
@@ -115,4 +116,35 @@ mat-drawer-content {
   }
 }
 
+.category-containter{
+  padding-top: 100px;
+  width:  50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.category-box{
+  background-color: black;
+  height: 250px;
+  width: 250px;
+  max-height: 240px;
+  max-width: 250px;
+  padding:0px;
+  display: table;
+}
+  
+    .category-box > .category-title{
+      color: #ccc;
+      text-align:center;
+      vertical-align: middle !important;
+      display:table-cell;
+      transition: .5s ease;
+      border-radius: 6px;
+    }
 
+    .category-title:hover{
+        box-shadow: 0 0 6px 3px rgba(42, 46, 48, 0.5);
+    }

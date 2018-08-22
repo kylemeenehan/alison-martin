@@ -20,9 +20,9 @@
 
 # IDE - VSCode
 .vscode/*
-!.vscode/settings.json
+.vscode/settings.json
 !.vscode/tasks.json
-!.vscode/launch.json
+.vscode/launch.json
 !.vscode/extensions.json
 
 # misc
@@ -42,4 +42,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-src/assets/images
+!src/assets/images

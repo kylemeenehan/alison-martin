@@ -10,22 +10,30 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { ApiService } from './api.service';
 
 import { AppComponent } from './app.component';
-import { CollectionComponent } from './collection/collection.component';
+import { LandingComponent} from './landing/landing.component';
 import { HomeComponent } from './home/home.component';
-
+import { CollectionComponent } from './collection/collection.component';
+import { AllWorksComponent } from './allworks/allworks.component';
+import { HomeSquareComponent } from './home-square/home-square.component';
+import { MatGridListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     CollectionComponent,
-    HomeComponent
+    AllWorksComponent,
+    LandingComponent,
+    HomeComponent,
+    HomeSquareComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [ ApiService ],
   bootstrap: [AppComponent]

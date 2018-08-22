@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -8,20 +7,16 @@ import { ApiService } from '../api.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   loading: boolean = true;
-  collections;
+  titles = [
+    { "url": "Director", "name": "Director" },
+    { "url": "ArtDirector", "name": "Art Director" },
+    { "url": "Art", "name": "Art" },
+    { "url": "Photography", "name": "Photography" }];
 
-  constructor( private api: ApiService ) {
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.api.downloadAll().then(() => {
-      this.collections = this.api.collections;
-      this.collections.forEach(collection => {
-        collection.image = this.api.getWorksByCollection(collection.id)[0].image;
-      })
-    });
   }
 
 }
