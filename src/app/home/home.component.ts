@@ -9,11 +9,12 @@ import { Title } from '../models/title';
 })
 export class HomeComponent implements OnInit {
   loading: boolean = true;
-  titles = Title.Titles;
+  titles;
 
   constructor() { }
 
   ngOnInit() {
+    this.titles = Title.Titles;
   }
 
 }
