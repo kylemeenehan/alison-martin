@@ -4,10 +4,13 @@
 @import "~include-media/dist/include-media";
 //@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-$header-height: 100px;
+$header-height: 150px;
 $thumbnail-width: 150px;
 $thumbnail-padding: 30px;
+$navigation-height: 50px;
+$top-height: $header-height + $navigation-height;
 
+$heading-color: rgb(163, 163, 163);
 $light-gray: #ccc;
 
 @mixin fluid-image {
@@ -18,7 +21,7 @@ $light-gray: #ccc;
 }
 
 @mixin full-height {
-  height: calc(100vh - #{$header-height});
+  height: calc(100vh - #{$top-height});
 }
 
 @mixin center-content {
@@ -38,7 +41,9 @@ html, body {
 }
 
 body {
-  padding-top: $header-height;
+  padding-top: $top-height;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: 'Nexa Light', 'Open Sans', sans-serif;
 }
 
@@ -116,8 +121,29 @@ mat-drawer-content {
   }
 }
 
+.header-navigation{
+  position: fixed;
+  background-color: white;
+  top: $header-height;
+  width: 100%;
+  height: $navigation-height;
+  z-index: 100;
+  border-bottom: 1px solid $heading-color;
+  @include center-content();
+  a {
+    color: $heading-color;
+    padding: 5px 0;
+    display: block;
+  }
+}
+
+.header-navigation > a.navigation-text {
+  color:rgb(163, 163, 163) !important;
+}
+
 .category-containter{
-  padding-top: 100px;
+  
+  padding-top: $header-height + $navigation-height;
   width:  50%;
   position: absolute;
   top:0;
@@ -125,6 +151,7 @@ mat-drawer-content {
   left: 0;
   right: 0;
   margin: auto;
+  @include center-content();
 }
 .category-box{
   background-color: black;

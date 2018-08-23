@@ -10,6 +10,7 @@ export class ApiService {
 
   _collections;
   _works;
+  _videos;
 
   get collections() {
     return this._collections;
@@ -19,6 +20,9 @@ export class ApiService {
     return this._works;
   }
 
+  get videos(){
+    return this._videos;
+  }
   constructor( private http: HttpClient ) {
   }
 
@@ -52,5 +56,14 @@ export class ApiService {
 
   getWorksByCollection(collectionId) {
     return this._works.filter(work => work.collection == collectionId);
+  }
+
+  getVideos(){
+    return new Promise((resolve, reject) =>{
+    this.http.get(this.API_URL + 'videos/').subscribe(videos => {
+      this._videos = videos;
+      resolve();
+    })
+    })
   }
 }

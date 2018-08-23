@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '../models/title';
 
 
 @Component({
@@ -8,11 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   loading: boolean = true;
-  titles = [
-    { "url": "Director", "name": "Director" },
-    { "url": "ArtDirector", "name": "Art Director" },
-    { "url": "Art", "name": "Art" },
-    { "url": "Photography", "name": "Photography" }];
+  titles = Title.Titles;
 
   constructor() { }
 

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatGridListModule } from '@angular/material';
 
 import { ApiService } from './api.service';
 
@@ -15,7 +16,10 @@ import { HomeComponent } from './home/home.component';
 import { CollectionComponent } from './collection/collection.component';
 import { AllWorksComponent } from './allworks/allworks.component';
 import { HomeSquareComponent } from './home-square/home-square.component';
-import { MatGridListModule } from '@angular/material';
+
+import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
+import { DirectorComponent } from './director/director.component';
+import { VideoComponent } from './video/video.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,9 @@ import { MatGridListModule } from '@angular/material';
     LandingComponent,
     HomeComponent,
     HomeSquareComponent,
+    HeaderNavigationComponent,
+    DirectorComponent,
+    VideoComponent,
 
   ],
   imports: [

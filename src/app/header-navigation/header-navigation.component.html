@@ -1,0 +1,11 @@
+<div class="columns header-navigation" *ngIf="showNav==1">
+  <div class="column is-3"></div>
+  <div class="column is-2 is-size-4" *ngFor="let title of titles">
+    <a routerLink="/{{title.url}}">
+      <div class="navigation-text">
+        {{title.name}}
+      </div>
+    </a>
+  </div>
+  <div class="column is-2"></div>
+</div>

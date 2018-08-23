@@ -1,0 +1,9 @@
+<mat-grid-list cols="2" rowHeight="500px">
+
+  <mat-grid-tile *ngFor="let item of videos">
+
+    <app-video [video]=item></app-video>
+
+  </mat-grid-tile>
+
+</mat-grid-list>
