@@ -1,9 +1,8 @@
-<mat-grid-list cols="2" rowHeight="500px">
-
-    <mat-grid-tile *ngFor="let item of videos">
+<div class="columns is-multiline">
+    <div class="column is-6" *ngFor="let item of videos">
   
       <app-video [video]=item></app-video>
   
-    </mat-grid-tile>
+    </div>
   
-  </mat-grid-list>
+  </div>

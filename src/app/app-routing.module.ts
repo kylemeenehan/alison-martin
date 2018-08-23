@@ -7,6 +7,7 @@ import { CollectionComponent } from './collection/collection.component';
 import { LandingComponent } from './landing/landing.component';
 import { DirectorComponent } from './director/director.component';
 import { ArtDirectorComponent } from './art-director/art-director.component';
+import { PhotographyComponent } from './photography/photography.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'collection/:id', component: CollectionComponent },
   { path: 'directing', component: DirectorComponent },
-  { path: 'art-directing', component: ArtDirectorComponent }
+  { path: 'art-directing', component: ArtDirectorComponent },
+  { path: 'photography', component: PhotographyComponent }
 ];
 
 @NgModule({

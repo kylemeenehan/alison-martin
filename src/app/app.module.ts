@@ -21,6 +21,7 @@ import { HeaderNavigationComponent } from './header-navigation/header-navigation
 import { DirectorComponent } from './director/director.component';
 import { VideoComponent } from './video/video.component';
 import { ArtDirectorComponent } from './art-director/art-director.component';
+import { PhotographyComponent } from './photography/photography.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ArtDirectorComponent } from './art-director/art-director.component';
     DirectorComponent,
     VideoComponent,
     ArtDirectorComponent,
+    PhotographyComponent,
 
   ],
   imports: [

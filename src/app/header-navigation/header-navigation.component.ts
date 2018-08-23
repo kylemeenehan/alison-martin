@@ -19,7 +19,7 @@ export class HeaderNavigationComponent implements OnInit {
 
   ngOnInit() {
     this.titles = Title.Titles;
-    if (location.pathname !== '/home' && location.pathname !=='/landing'){
+    if (location.pathname !== '/home' && location.pathname !=='/'){
       this.showNav = 1;
     }  
      
