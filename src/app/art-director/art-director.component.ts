@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
-
 
 @Component({
-  selector: 'app-director',
-  templateUrl: './director.component.html',
-  styleUrls: ['./director.component.scss']
+  selector: 'app-art-director',
+  templateUrl: './art-director.component.html',
+  styleUrls: ['./art-director.component.scss']
 })
-export class DirectorComponent implements OnInit {
+export class ArtDirectorComponent implements OnInit {
   videos;
-  constructor(private api: ApiService ) { }
-  
-  
+
+  constructor() { }
+
   ngOnInit() {
-    //this.api.getDirections().then(() => {
+        //this.api.getArtDirections().then(() => {
     //  this.directions = this.api.directions;
     //})
     this.videos = [{"videoId": "286216759", 'description': 'some description'},
     {"videoId": "286216759", 'description': 'some description'},
     {"videoId": "286216759", 'description': 'some description'}]
   }
+
 }

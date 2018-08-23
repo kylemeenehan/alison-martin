@@ -20,6 +20,7 @@ import { HomeSquareComponent } from './home-square/home-square.component';
 import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
 import { DirectorComponent } from './director/director.component';
 import { VideoComponent } from './video/video.component';
+import { ArtDirectorComponent } from './art-director/art-director.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { VideoComponent } from './video/video.component';
     HeaderNavigationComponent,
     DirectorComponent,
     VideoComponent,
+    ArtDirectorComponent,
 
   ],
   imports: [

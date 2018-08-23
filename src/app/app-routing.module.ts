@@ -6,6 +6,7 @@ import { AllWorksComponent } from './allworks/allworks.component';
 import { CollectionComponent } from './collection/collection.component';
 import { LandingComponent } from './landing/landing.component';
 import { DirectorComponent } from './director/director.component';
+import { ArtDirectorComponent } from './art-director/art-director.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'allworks', component: AllWorksComponent },
   { path: 'home', component: HomeComponent },
   { path: 'collection/:id', component: CollectionComponent },
-  { path: 'director', component: DirectorComponent}
+  { path: 'directing', component: DirectorComponent },
+  { path: 'art-directing', component: ArtDirectorComponent }
 ];
 
 @NgModule({

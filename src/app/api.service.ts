@@ -10,7 +10,8 @@ export class ApiService {
 
   _collections;
   _works;
-  _videos;
+  _directions;
+  _artDirections;
 
   get collections() {
     return this._collections;
@@ -20,9 +21,14 @@ export class ApiService {
     return this._works;
   }
 
-  get videos(){
-    return this._videos;
+  get directions(){
+    return this._directions;
   }
+
+  get artDirections(){
+    return this._artDirections;
+  }
+
   constructor( private http: HttpClient ) {
   }
 
@@ -58,10 +64,19 @@ export class ApiService {
     return this._works.filter(work => work.collection == collectionId);
   }
 
-  getVideos(){
+  getDirections(){
     return new Promise((resolve, reject) =>{
-    this.http.get(this.API_URL + 'videos/').subscribe(videos => {
-      this._videos = videos;
+    this.http.get(this.API_URL + 'directions/').subscribe(directions => {
+      this._directions = directions;
+      resolve();
+    })
+    })
+  }
+
+  getArtDirections(){
+    return new Promise((resolve, reject) =>{
+    this.http.get(this.API_URL + 'artdirections/').subscribe(directions => {
+      this._artDirections = directions;
       resolve();
     })
     })
