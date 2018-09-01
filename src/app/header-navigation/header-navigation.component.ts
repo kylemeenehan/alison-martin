@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '../models/title';
-import { Location } from '@angular/common';
-import { debug } from 'util';
 
 @Component({
   selector: 'app-header-navigation',
@@ -11,18 +9,14 @@ import { debug } from 'util';
 })
 export class HeaderNavigationComponent implements OnInit {
   titles;
-  showNav: number = 0;
-  location: Location;
-  constructor(location: Location) { this.location = location; }
-    
-  
+  constructor() { }
+
+
 
   ngOnInit() {
     this.titles = Title.Titles;
-    if (location.pathname !== '/home' && location.pathname !=='/'){
-      this.showNav = 1;
-    }  
-     
+
+
   }
 
 }
