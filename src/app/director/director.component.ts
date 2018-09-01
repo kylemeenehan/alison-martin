@@ -9,15 +9,12 @@ import { ApiService } from '../api.service';
 })
 export class DirectorComponent implements OnInit {
   videos;
-  constructor(private api: ApiService ) { }
-  
-  
+  constructor(private api: ApiService) { }
+
+
   ngOnInit() {
-    //this.api.getDirections().then(() => {
-    //  this.directions = this.api.directions;
-    //})
-    this.videos = [{"videoId": "286216759", 'description': 'some description'},
-    {"videoId": "286216759", 'description': 'some description'},
-    {"videoId": "286216759", 'description': 'some description'}]
+    this.api.getDirectingList().then(() => {
+     this.videos = this.api.directions;
+    });
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-art-director',
@@ -8,15 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class ArtDirectorComponent implements OnInit {
   videos;
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit() {
-        //this.api.getArtDirections().then(() => {
-    //  this.directions = this.api.directions;
-    //})
-    this.videos = [{"videoId": "286216759", 'description': 'some description'},
-    {"videoId": "286216759", 'description': 'some description'},
-    {"videoId": "286216759", 'description': 'some description'}]
+    this.api.getArtDirections().then(() => {
+      this.videos = this.api.artDirections;
+    });
   }
 
 }

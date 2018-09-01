@@ -8,7 +8,7 @@ import { Title } from '../models/title';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  loading: boolean = true;
+  loading: true;
   titles;
 
   constructor() { }

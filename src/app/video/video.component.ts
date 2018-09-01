@@ -14,7 +14,7 @@ export class VideoComponent implements OnInit {
   ngOnInit() {
   }
 
-  getUrl(videoId){
-    return this.sanitizer.bypassSecurityTrustResourceUrl('https://player.vimeo.com/video/'+videoId);
+  getUrl(videoId) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl('https://player.vimeo.com/video/' + videoId);
   }
 }

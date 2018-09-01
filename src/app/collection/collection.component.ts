@@ -29,9 +29,9 @@ export class CollectionComponent implements OnInit {
     this.collections = this.api.collections;
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.container.nativeElement.scrollTop = 0;
-      let id = params.get('id');
+      const id = params.get('id');
       this.collection = this.collections.find(collection => collection.id == id);
-      this.works = this.api.getWorksByCollection(id)
+      this.works = this.api.getWorksByCollection(id);
     });
   }
 
