@@ -188,36 +188,36 @@ mat-drawer-content {
 }
 .category-containter{
   
-  padding-top: $top-height;
   width:  50%;
-  position: absolute;
+  position: relative;
   top:0;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
   
   .category-box{
     background-color: black;
-    height: 250px;
-    width: 250px;
-    max-height: 240px;
-    max-width: 250px;
-    padding:0px;
-    display: table;
     
+    padding:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .category-title{
+      width: 100px;
+      height: 100px;
+      align-items: center;
+    justify-content: center;
           color: #ccc;
-          text-align:center;
+          display: flex;
           vertical-align: middle !important;
-          display:table-cell;
+          
           transition: .5s ease;
           @include rounded-corners;
         
           :hover{
             box-shadow: 0 0 6px 3px rgba(42, 46, 48, 0.5);
         }
-      }
+        }
   }
 }
 

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.titles = Title.Titles;
+    this.titles = Title.Titles.filter(x => x.displayBlock === true);
   }
 
 }
