@@ -22,6 +22,7 @@ import { DirectorComponent } from './director/director.component';
 import { VideoComponent } from './video/video.component';
 import { ArtDirectorComponent } from './art-director/art-director.component';
 import { PhotographyComponent } from './photography/photography.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PhotographyComponent } from './photography/photography.component';
     VideoComponent,
     ArtDirectorComponent,
     PhotographyComponent,
+    ContactComponent,
 
   ],
   imports: [

@@ -8,6 +8,7 @@ import { LandingComponent } from './landing/landing.component';
 import { DirectorComponent } from './director/director.component';
 import { ArtDirectorComponent } from './art-director/art-director.component';
 import { PhotographyComponent } from './photography/photography.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'collection/:id', component: CollectionComponent },
   { path: 'directing', component: DirectorComponent },
   { path: 'art-directing', component: ArtDirectorComponent },
-  { path: 'photography', component: PhotographyComponent }
+  { path: 'photography', component: PhotographyComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
