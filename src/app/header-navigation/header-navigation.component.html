@@ -1,5 +1,6 @@
-<div class="columns header-navigation">
-  <div class="column is-2 is-size-4" *ngFor="let title of titles">
+
+<div class="columns header-navigation" >
+  <div class="column is-2 is-size-6" *ngFor="let title of titles">
     <a routerLink="/{{title.url}}" class="navigation-text" routerLinkActive='active'>
       
         {{title.name}}

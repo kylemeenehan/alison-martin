@@ -4,12 +4,11 @@
 @import "~include-media/dist/include-media";
 //@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-$header-height: 100px;
+$header-height: 65px;
 $thumbnail-width: 150px;
 $thumbnail-padding: 30px;
-$navigation-height: 50px;
+$navigation-height: 38px;
 $top-height: $header-height + $navigation-height;
-
 $heading-color: rgb(163, 163, 163);
 $light-gray: #ccc;
 
@@ -20,9 +19,13 @@ $light-gray: #ccc;
     max-height: 100%;
 }
 
-@mixin full-height {
-  height: calc(100vh - #{$top-height});
+@mixin top-height {
+  height: calc(100vh - #{$header-height} + #{$navigation-height} +10px)
 }
+@mixin full-height {
+  height: calc(100vh - top-height);
+}
+
 
 @mixin center-content {
   display: flex;
@@ -50,6 +53,7 @@ html, body {
 
 body {
   padding-top: $top-height;
+  margin-top:10px;
   padding-left: 10px;
   padding-right: 10px;
   font-family: 'Nexa Light', 'Open Sans', sans-serif;
@@ -71,6 +75,20 @@ mat-drawer-content {
     height: 100%;
     overflow: scroll;
   }
+}
+.video-container {
+  height: 250px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media('<=tablet') {
+    height: auto;
+    padding: 5px;
+  }
+
 }
 
 .image-container {
@@ -120,6 +138,7 @@ mat-drawer-content {
   cursor: pointer;
   @include center-content();
 
+  
   &:focus {
     outline: none;
   }
@@ -143,18 +162,16 @@ mat-drawer-content {
     padding: 5px 0;
     display: block;
   }
-}
 
-.header-navigation {
   text-align: center;
   
   a:after {
-  display:block;
-  content: '';
-  border-bottom: solid 3px #d6d6d6;  
-  transform: scaleX(0);  
-  transition: transform 250ms ease-in-out;
-}
+    display:block;
+    content: '';
+    border-bottom: solid 3px #d6d6d6;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
   a:hover:after { 
     transform: scaleX(1); 
   }
@@ -171,7 +188,7 @@ mat-drawer-content {
 }
 .category-containter{
   
-  padding-top: $header-height + $navigation-height;
+  padding-top: $top-height;
   width:  50%;
   position: absolute;
   top:0;
@@ -202,4 +219,8 @@ mat-drawer-content {
         }
       }
   }
+}
+
+.box{
+  padding: 0.0rem;
 }

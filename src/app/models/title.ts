@@ -1,9 +1,10 @@
 export class Title{
     static Titles = [
-        { 'url': 'directing', 'name': 'Director' },
-        { 'url': 'art-directing', 'name': 'Art Director' },
-        { 'url': 'collection/1', 'name': 'Art' },
-        { 'url': 'photography', 'name': 'Photography' }];
+        { 'displayBlock': true, 'url': 'directing', 'name': 'Director' },
+        { 'displayBlock': true, 'url': 'art-directing', 'name': 'Art Director' },
+        { 'displayBlock': false, 'url': 'contact', 'name': 'Contact' },
+        { 'displayBlock': true, 'url': 'collection/0', 'name': 'Art' },
+        { 'displayBlock': true, 'url': 'photography', 'name': 'Photography' }];
     url: string;
     name: string;
 }
