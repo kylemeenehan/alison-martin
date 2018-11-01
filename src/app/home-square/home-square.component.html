@@ -1,16 +1,11 @@
-<div *ngIf="title">
+<div *ngIf="title"  >
 
-  <div class="box category-box">
-    
-      <div class="">
-        <a routerLink="/{{title.url}}">
-          <div class="">
-            <div class="category-title">{{title.name}}</div>
-          </div>
-        </a>
-      </div>
-    
-  </div>
+  <a routerLink="/{{title.url}}" class="">
+    <div class="box category-box">
+
+      <div class="category-title">{{title.name}}</div>
+
+    </div>
+  </a>
 
 </div>
-

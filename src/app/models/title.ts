@@ -1,10 +1,10 @@
-export class Title{
+export class Title {
     static Titles = [
-        { 'displayBlock': true, 'url': 'directing', 'name': 'Director' },
-        { 'displayBlock': true, 'url': 'art-directing', 'name': 'Art Director' },
-        { 'displayBlock': false, 'url': 'contact', 'name': 'Contact' },
-        { 'displayBlock': true, 'url': 'collection/0', 'name': 'Art' },
-        { 'displayBlock': true, 'url': 'photography', 'name': 'Photography' }];
+        { 'displayBlock': true, 'url': 'directing', 'name': 'DIRECTOR' },
+        { 'displayBlock': true, 'url': 'art-directing', 'name': 'ART DIRECTOR' },
+        { 'displayBlock': false, 'url': 'contact', 'name': 'CONTACT' },
+        { 'displayBlock': true, 'url': 'collection/0', 'name': 'ART' },
+        { 'displayBlock': true, 'url': 'photography', 'name': 'PHOTOGRAPHY' }];
     url: string;
     name: string;
 }

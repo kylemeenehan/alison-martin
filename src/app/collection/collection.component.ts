@@ -23,10 +23,11 @@ export class CollectionComponent implements OnInit {
   }
 
   async ngOnInit() {
-    if(!this.api.collections || !this.api.works) {
+    if (!this.api.collections || !this.api.works) {
       await this.api.downloadAll();
     }
     this.collections = this.sortCollections(this.api.collections);
+    
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.container.nativeElement.scrollTop = 0;
       let id = params.get('id');
