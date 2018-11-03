@@ -31,9 +31,6 @@ export class CollectionComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.container.nativeElement.scrollTop = 0;
       let id = params.get('id');
-      if (id == '0') {
-        id = '4'; // this was the id of the collection that we want to display first if navtigating to the page the first time. Probably not anymore though.
-      }
       this.collection = this.collections.find(collection => collection.id == id);
       this.works = this.api.getWorksByCollection(id);
     });

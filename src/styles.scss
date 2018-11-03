@@ -2,8 +2,8 @@
 
 @import "~bulma/css/bulma.css";
 @import "~include-media/dist/include-media";
-@import "./assets/css/custom.css";
-//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @font-face {
     font-family: 'alisonhandwritingmedium';
     src: url('/assets/fonts/alisonhandwriting_1-webfont.woff2') format('woff2'), url('/assets/fonts/alisonhandwriting_1-webfont.woff') format('woff');
@@ -66,7 +66,7 @@ body {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: 'alisonhandwritingmedium', 'Nexa Light', 'Open Sans', sans-serif;
+    font-family: 'Nexa Light', 'Open Sans', sans-serif;
 }
 
 mat-drawer-container {
@@ -143,6 +143,7 @@ mat-drawer-content {
 }
 
 .header {
+    font-family: 'alisonhandwritingmedium';
     position: relative;
     width: 100%;
     background-color: #ffffff00;
@@ -161,7 +162,7 @@ mat-drawer-content {
 
 .header-navigation {
     position: relative; // background-color: #ffffff00;
-    // top: $header-height;
+    font-family: 'alisonhandwritingmedium';
     width: 100%;
     height: $navigation-height;
     z-index: 100; // border-bottom: 1px solid $heading-color;
