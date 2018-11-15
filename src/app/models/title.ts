@@ -3,7 +3,7 @@ export class Title {
         { 'displayBlock': true, 'url': 'directing', 'name': 'DIRECTOR' },
         { 'displayBlock': true, 'url': 'art-directing', 'name': 'ART DIRECTOR' },
         { 'displayBlock': false, 'url': 'contact', 'name': 'CONTACT' },
-        { 'displayBlock': true, 'url': 'collection', 'name': 'ART' },
+        { 'displayBlock': true, 'url': 'collection/1', 'name': 'ART' },
         { 'displayBlock': true, 'url': 'photography', 'name': 'PHOTOGRAPHY' }];
     url: string;
     name: string;

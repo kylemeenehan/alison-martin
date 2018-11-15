@@ -27,20 +27,20 @@ export class CollectionComponent implements OnInit {
       await this.api.downloadAll();
     }
     this.collections = this.sortCollections(this.api.collections);
-    
+
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.container.nativeElement.scrollTop = 0;
-      let id = params.get('id');
+      const id = params.get('id');
       this.collection = this.collections.find(collection => collection.id == id);
       this.works = this.api.getWorksByCollection(id);
     });
   }
 
   sortCollections = (collections: any) =>
-  collections.sort((a, b) => {
-    if (Number(a.sort_order) < Number(b.sort_order)) { return -1; }
-    if (Number(a.sort_order) === Number(b.sort_order)) { return 0; }
-    if (Number(a.sort_order) > Number(b.sort_order)) { return 1; }
-    return 0;
-  })
+    collections.sort((a, b) => {
+      if (Number(a.sort_order) < Number(b.sort_order)) { return -1; }
+      if (Number(a.sort_order) === Number(b.sort_order)) { return 0; }
+      if (Number(a.sort_order) > Number(b.sort_order)) { return 1; }
+      return 0;
+    })
 }

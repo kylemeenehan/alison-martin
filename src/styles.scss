@@ -3,13 +3,13 @@
 @import "~bulma/css/bulma.css";
 @import "~include-media/dist/include-media";
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@font-face {
-    font-family: 'alisonhandwritingmedium';
-    src: url('/assets/fonts/alisonhandwriting_1-webfont.woff2') format('woff2'), url('/assets/fonts/alisonhandwriting_1-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @font-face {
+//     font-family: 'alisonhandwritingmedium';
+//     src: url('/assets/fonts/alisonhandwriting_1-webfont.woff2') format('woff2'), url('/assets/fonts/alisonhandwriting_1-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 
 $header-height: 65px;
 $thumbnail-width: 150px;
@@ -67,6 +67,11 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'Nexa Light', 'Open Sans', sans-serif;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 mat-drawer-container {
@@ -143,7 +148,6 @@ mat-drawer-content {
 }
 
 .header {
-    font-family: 'alisonhandwritingmedium';
     position: relative;
     width: 100%;
     background-color: #ffffff00;
@@ -162,7 +166,6 @@ mat-drawer-content {
 
 .header-navigation {
     position: relative; // background-color: #ffffff00;
-    font-family: 'alisonhandwritingmedium';
     width: 100%;
     height: $navigation-height;
     z-index: 100; // border-bottom: 1px solid $heading-color;
@@ -202,10 +205,7 @@ mat-drawer-content {
     .category-box {
         background-color: black;
         @include rounded-corners;
-        transition: .5s ease;
-        :hover {
-            box-shadow: 0 0 6px 3px rgba(42, 46, 48, 0.5);
-        }
+
         @include media('<=tablet') {
             min-height: 100px;
             max-width: 200px;
@@ -228,10 +228,29 @@ mat-drawer-content {
             color: #ccc;
             display: flex;
             vertical-align: middle !important;
+            transition: .5s ease;
+            :hover {
+                box-shadow: 0 0 6px 3px rgba(42, 46, 48, 0.5);
+            }
         }
     }
 }
 
 .box {
     padding: 0.0rem;
+}
+
+
+.base {
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.contact-img {
+    @include media('<=tablet') {
+        display: none;
+    }
 }

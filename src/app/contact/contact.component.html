@@ -1,5 +1,84 @@
 <app-header-navigation></app-header-navigation>
-<div> <p>
-  contact works!
-</p>
-</div>  
+<div class="base contact-img">
+  <img src="/assets/images/swan-transparent.png" />
+</div>
+
+<div class="container">
+  <nav class="level ">
+    <div class="level-item has-text-centered">
+      <img src="/assets/images/swan-solid-no-bg-contact.png" class="image " width="150px" />
+    </div>
+  </nav>
+
+  <nav class="level">
+    <div class="level-item has-text-centered">
+      <label><b>074 148 5674</b></label>
+    </div>
+  </nav>
+
+  <nav class="level">
+    <div class="level-item has-text-centered">
+      <label><b>haai@aliswan.co.za</b></label>
+    </div>
+  </nav>
+
+  <hr>
+  <nav class="level">
+    <div class="level-item has-text-centered">
+      <h3>Send Me a Message</h3>
+    </div>
+  </nav>
+
+  <div class="columns">
+    <div class="column  is-half is-offset-one-quarter">
+      <div class="field">
+        <label for="name" class="label">Name</label>
+        <div class="control has-icon-left">
+          <input type="text" class="input" name="name" placeholder="Name or Company" [(ngModel)]="Contact.Name">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="Phone" class="label">Phone</label>
+        <div class="control has-icon-left">
+          <input type="text" class="input" name="Phone" placeholder="Phone" [(ngModel)]="Contact.Phone">
+          <span class="icon is-small is-left">
+            <i class="fas fa-phone"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="Email" class="label">Email</label>
+        <div class="control has-icon-left">
+          <input type="text" class="input" name="Email" placeholder="Email" [(ngModel)]="Contact.Email">
+          <span class="icon is-small is-left">
+            <i class="fas fa-email"></i>
+          </span>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label for="Message" class="label">Message</label>
+        <div class="control has-icon-left">
+          <textarea name="Message" id="" cols="30" rows="10" class="textarea" placeholder="Message" [(ngModel)]="Contact.Message"></textarea>
+          <span class="icon is-small is-left">
+            <i class="fas fa-text"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div class="field is-grouped is-grouped-centered">
+        <p class="control">
+          <a class="button is-primary" (click)="sendMessage()">Send Message!</a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>

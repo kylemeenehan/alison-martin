@@ -23,6 +23,7 @@ import { VideoComponent } from './video/video.component';
 import { ArtDirectorComponent } from './art-director/art-director.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule
   ],
   providers: [ ApiService ],
   bootstrap: [AppComponent]
