@@ -8,10 +8,10 @@ import { Contact } from '../models/contact';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  Contact: Contact = { Name: '',Email: '', Message: '', Phone: '' };
+  Contact: Contact = { Name: '', Email: '', Message: '', Phone: '' };
 
   constructor(private api: ApiService) {
-    
+
   }
 
   ngOnInit() {
@@ -21,8 +21,8 @@ export class ContactComponent implements OnInit {
    * SE
    */
   public sendMessage() {
-    let i = 1;
-console.log(this.Contact);
+    debugger;
+    this.api.postContact(this.Contact);
   }
 
 }

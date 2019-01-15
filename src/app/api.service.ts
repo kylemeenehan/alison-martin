@@ -13,6 +13,12 @@ export class ApiService {
   _directions;
   _artDirections;
   _photos;
+  _contact;
+
+  get contact(){
+    return this._contact;
+  }
+  
   get collections() {
     return this._collections;
   }
@@ -90,6 +96,15 @@ export class ApiService {
     return new Promise((resolve, reject) => {
       this.http.get(this.API_URL + 'photography/').subscribe(photos => {
         this._photos = photos;
+        resolve();
+      });
+    });
+  }
+
+  postContact(contact) {
+    return new Promise((resolve, reject) => {
+      this.http.post(this.API_URL + 'contact', contact).subscribe(result => {
+        this._contact = result;
         resolve();
       });
     });
