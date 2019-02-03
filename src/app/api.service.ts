@@ -5,8 +5,8 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ApiService {
 
-  // API_URL = 'http://178.128.160.165/api/';
-   API_URL = 'http://127.0.0.1:8000/api/';
+   API_URL = 'http://178.128.160.165/api/';
+  // API_URL = 'http://127.0.0.1:8000/api/';
 
   _collections;
   _works;
@@ -103,7 +103,7 @@ export class ApiService {
 
   postContact(contact) {
     return new Promise((resolve, reject) => {
-      this.http.post(this.API_URL + 'contact', contact).subscribe(result => {
+      this.http.post(this.API_URL + 'contact/', contact).subscribe(result => {
         this._contact = result;
         resolve();
       });

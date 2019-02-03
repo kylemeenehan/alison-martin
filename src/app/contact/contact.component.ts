@@ -8,7 +8,7 @@ import { Contact } from '../models/contact';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  Contact: Contact = { Name: '', Email: '', Message: '', Phone: '' };
+  Contact: Contact = { name: '', email: '', message: '', phone: '', created: new Date() };
 
   constructor(private api: ApiService) {
 
@@ -21,7 +21,6 @@ export class ContactComponent implements OnInit {
    * SE
    */
   public sendMessage() {
-    debugger;
     this.api.postContact(this.Contact);
   }
 
