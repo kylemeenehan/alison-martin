@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ApiService {
 
-   API_URL = 'http://178.128.160.165/api/';
+  API_URL = 'http://178.128.160.165/api/';
   // API_URL = 'http://127.0.0.1:8000/api/';
 
   _collections;
@@ -15,10 +15,10 @@ export class ApiService {
   _photos;
   _contact;
 
-  get contact(){
+  get contact() {
     return this._contact;
   }
-  
+
   get collections() {
     return this._collections;
   }

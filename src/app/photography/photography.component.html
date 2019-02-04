@@ -1,22 +1,15 @@
 <app-header-navigation></app-header-navigation>
 <div class="container" #container>
   <div class="columns is-multiline">
-    <div class="column is-3" *ngFor="let item of photos">
+    <div class="column is-half is-narrow" *ngFor="let item of photos">
 
       <div class="card">
         <div class="card-content image-container">
 
-          <figure class="image is-128x128">
+          <figure class="image">
             <img [src]="item.image" alt="{{item.name}}">
           </figure>
 
-          <footer class="card-footer">
-            <p class="card-footer-item">
-              <span>
-                {{item.description}} |  {{ item.dimensions_x }}mm x {{ item.dimensions_y }}mm
-              </span>
-            </p>
-          </footer>
         </div>
       </div>
 
@@ -25,3 +18,4 @@
   </div>
 
 </div>
+
