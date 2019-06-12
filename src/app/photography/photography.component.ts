@@ -15,7 +15,7 @@ export class PhotographyComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.api.getPhotos().then(() => {
+    this.api.getPhotos(2).then(() => {
       this.photos = this.api.photos;
     });
   }

@@ -12,8 +12,8 @@ export class ArtDirectorComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.api.getArtDirections().then(() => {
-      this.videos = this.api.artDirections;
+    this.api.getDirectingList(2).then(() => {
+      this.videos = this.api.directions;
     });
   }
 

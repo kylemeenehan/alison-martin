@@ -13,7 +13,7 @@ export class DirectorComponent implements OnInit {
 
 
   ngOnInit() {
-    this.api.getDirectingList().then(() => {
+    this.api.getDirectingList(1).then(() => {
      this.videos = this.api.directions;
     });
   }
